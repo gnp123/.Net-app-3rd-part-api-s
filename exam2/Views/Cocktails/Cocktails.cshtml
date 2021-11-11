@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Cocktails";
+}
+
+<h2 align="center" style="font-family:Algerian">Cocktails List</h2>
+
+
+
+
+<br />
+<br />
+@using (Html.BeginForm())
+{
+    <p align="center" >
+        You are searching for cocktail: @Html.TextBox("searchName")
+        <input type="submit" value="Search" />
+    </p>
+    <br />
+    <br />
+    <h2 align="center" style="font-family:Algerian">@ViewBag.drinkName</h2>
+    <br />
+    <br />
+    <h4 align="center" style="font-family:Algerian">@ViewBag.strInstructions</h4>
+    <br />
+    <br />
+    <img src="@ViewBag.image" class="center-block" />
+
+
+
+}

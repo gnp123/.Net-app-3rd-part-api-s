@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "The Weather";
+}
+
+<h2 align="center">The Weather</h2>
+
+<br />
+<br />
+@using(Html.BeginForm())
+            {
+                <p align="center">
+                    You are seraching for city: @Html.TextBox("citySearch")
+                    <input type="submit"value="Search"/>
+                </p>
+                <h2 align="center">@ViewBag.cityname</h2>
+                <h4 align="center">@ViewBag.temperature C </h4>
+                <br/>
+                <img src="@ViewBag.image" class="center-block"/>
+            }
+

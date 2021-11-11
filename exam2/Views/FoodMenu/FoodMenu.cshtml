@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "CoinV";
+}
+
+<h1 style="font-family:'Arial Rounded MT'" align="center">Coin Market Info</h1>
+<br />
+<br />
+
+@using (Html.BeginForm())
+{
+    <p align="center">
+        <b> You are seraching for crypto coin:</b> @Html.TextBox("searchCoin")
+        <input type="submit" value="Search" />
+    </p>
+    <br />
+    <h2 style="font-family:Algerian" align="center">@ViewBag.name</h2>
+    <br />
+    <img align="top" src="@ViewBag.pict" class="center-block" height="100" width="100" />
+    <br />
+
+
+    <h4 style="font-family:'Arial Rounded MT'" align="center">Price : @ViewBag.price EUR</h4>
+    <h4 style="font-family:'Arial Rounded MT'" align="center">Percent change in 1 hour : @ViewBag.per1h %</h4>
+    <h4 style="font-family:'Arial Rounded MT'" align="center">Percent change in 24 hours: @ViewBag.per24h %</h4>
+    <h4 style="font-family:'Arial Rounded MT'" align="center">Percent change in 7 days: @ViewBag.per7d %</h4>
+    <br />
+    <br />
+    <h4 style="font-family:'Arial Rounded MT'">@ViewBag.ddd</h4>
+
+
+}
+
